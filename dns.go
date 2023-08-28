@@ -65,15 +65,3 @@ type DNSProvider interface {
 	NewClient() (DNSProviderClient, error)
 }
 
-var DynDNSServiceClass = reflect.TypeOf((*DynDNSService)(nil)).Elem()
-
-type DynDNSService interface {
-	glue.NamedBean
-	glue.InitializingBean
-
-	EnsureAllPublic(subDomains ...string) error
-
-	EnsureCustom(func(client DNSProviderClient, zone string, externalIP string) error) error
-
-}
-
