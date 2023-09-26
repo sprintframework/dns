@@ -2,7 +2,7 @@ module github.com/sprintframework/dns
 
 go 1.17
 
-require github.com/codeallergy/glue v1.1.0
+require github.com/codeallergy/glue v1.1.3
 
 require (
 	github.com/kr/pretty v0.3.0 // indirect
