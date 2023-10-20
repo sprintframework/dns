@@ -62,6 +62,6 @@ type DNSProvider interface {
 
 	Detect(whois *Whois) bool
 
-	NewClient() (DNSProviderClient, error)
+	NewClient(token string) (DNSProviderClient, error)
 }
 
